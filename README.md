@@ -36,5 +36,5 @@ How to start:
 
 Updates
   - REMOVED: Mass join servers as lurker. Servers are fetched by server id and/or from Discover tab for endless servers |
-    REASON: Kinda op because you can start to track users being in so many servers, and Discord already patched the shitty way
+    REASON: Kinda op because you can start to track users being in so many servers, and Discord already patched the easy way
  
