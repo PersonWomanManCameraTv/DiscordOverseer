@@ -15,8 +15,12 @@ Using Discord websockets allows much more pure data than the offical API, with t
 - Able to log messages at a rate of around 6k/min | 100/s. The limit is much, much higher, but you can only get such active servers.
   1pm & 6pm est is a good time for benchmarking
 
+ 
+ 
 
-
+ 
+ 
+ 
 VIDEO 1   
 [![Demo Video](https://img.youtube.com/vi/fYGBQF932d8/0.jpg)](https://www.youtube.com/watch?v=fYGBQF932d8)
 
