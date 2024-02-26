@@ -32,7 +32,8 @@ VIDEO 2
 How to start:
   1. Download the code
   2. npm i  OR npm i ws,pg
-  3. npm "dir/to/DiscordOverseer/backend/app.js"
+  3. Go to backend/helpers.js and add your discord token where it says
+  4. npm "dir/to/DiscordOverseer/backend/app.js"
 
 
 Updates
