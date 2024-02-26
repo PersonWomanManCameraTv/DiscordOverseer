@@ -17,7 +17,7 @@ Using Discord websockets allows much more pure data than the offical API, with t
 
 
 
-[![Demo Video](https://img.youtube.com/vi/A1xI6LoHhSo/0.jpg)](https://www.youtube.com/watch?v=A1xI6LoHhSo)
+[![Demo Video](https://img.youtube.com/vi/fYGBQF932d8/0.jpg)](https://www.youtube.com/watch?v=fYGBQF932d8)
 
 [![Demo Video](https://img.youtube.com/vi/X0XM2XZ-yck/0.jpg)](https://www.youtube.com/watch?v=X0XM2XZ-yck)
 
