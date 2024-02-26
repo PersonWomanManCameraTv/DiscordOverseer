@@ -1,4 +1,5 @@
 *CAUTION: USE AN ALT ACCOUNT. I'm not responsible for anything that happens*
+ 
 DISCLAIMER: Prob breaks Discord TOS
 
 I only use my main account that I love, but that's because I trust this. This is acting (to a degree) as closely to a native discord client.
