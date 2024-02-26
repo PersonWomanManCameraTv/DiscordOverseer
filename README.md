@@ -1,4 +1,5 @@
-*CAUTION: USE AN ALT ACCOUNT*
+*CAUTION: USE AN ALT ACCOUNT. I'm not responsible for anything that happens*
+
 DISCLAIMER: I only use my main account that I love, but that's because I trust this. This is acting (to a degree) as closely to a native discord client.
 
 This is currently a very botched and neutered version of the backend that's running my custom discord client. It's only got the most basic features for
