@@ -16,9 +16,10 @@ Using Discord websockets allows much more pure data than the offical API, with t
   1pm & 6pm est is a good time for benchmarking
 
 
-
+VIDEO 1
 [![Demo Video](https://img.youtube.com/vi/fYGBQF932d8/0.jpg)](https://www.youtube.com/watch?v=fYGBQF932d8)
 
+VIDEO 2
 [![Demo Video](https://img.youtube.com/vi/X0XM2XZ-yck/0.jpg)](https://www.youtube.com/watch?v=X0XM2XZ-yck)
 
 
