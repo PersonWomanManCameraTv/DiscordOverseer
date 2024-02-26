@@ -11,7 +11,7 @@ class Helpers{
 class DiscordSocketHelper{
     constructor(){
  
-        this.sDiscord_auth_token =  "MzIyNzkyMDcwODE1MTU0MTc5.GbiXD7.Sy4s6pqBEeks2UF4Fi6XAG7tY91_uSqgFrF2C4";
+        this.sDiscord_auth_token =  "";
         this.sStartConnectionEndpoint = "wss://gateway.discord.gg/?v=9&encoding=json";
         this.sStartConnectionPayload = {"op":2,"d":{
             "token":this.sDiscord_auth_token,
