@@ -11,7 +11,7 @@ class Helpers{
 class DiscordSocketHelper{
     constructor(){
  
-        this.sDiscord_auth_token =  "";
+        this.sDiscord_auth_token =  ""; // put your discord token here, srry never heard of an .env file
         this.sStartConnectionEndpoint = "wss://gateway.discord.gg/?v=9&encoding=json";
         this.sStartConnectionPayload = {"op":2,"d":{
             "token":this.sDiscord_auth_token,
