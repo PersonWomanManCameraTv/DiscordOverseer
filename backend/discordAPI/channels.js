@@ -1,0 +1,7 @@
+/*
+    Show all hidden channels
+    Get roles of each channel
+    Get roles in order of perms
+    Get clients active in channel
+    More stuff
+*/
