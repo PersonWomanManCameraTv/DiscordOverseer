@@ -3,7 +3,7 @@
 DISCLAIMER: I only use my main account that I love, but that's because I trust this. This is acting (to a degree) as closely to a native discord client.
 
 This is currently a very botched and neutered version of the backend that's running my custom discord client. It's only got the most basic features for
-logging mostly anything related to messages. You will need postgresql for the database, or you can easily add you own in database/database.js.
+logging mostly anything related to messages. You will need postgresql for the database, or you can easily add your own in database/database.js.
 
 There is a folder called "DiscordAPI". This was a bad naming moment on my part and this is purely just using the Discord sockets.
 
