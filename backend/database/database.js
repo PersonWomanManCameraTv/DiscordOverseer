@@ -8,7 +8,7 @@ const defaultConnectionParams = {
   port: 5432, 
 };
 
-const bUseDatabase = true;// If you don't have a database, change bUseDatabase to false
+const bUseDatabase = false;// If you don't have a database, change bUseDatabase to false
 let pool = null;
 
 if(bUseDatabase){
