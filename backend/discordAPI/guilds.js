@@ -7,19 +7,15 @@ class Guilds{
 
         try {
             const result = d.guilds;
-            //lol callback. Just sending back the complete my subbed guilds list
-            callback({
-                type: "GUILDS",
-                result
-            })
-
+            
             result.map((server_item) => {
-                let current_server_id = server_item.properties.id && server_item.properties.id ? server_item.properties.id : ""
+                const current_server_id = server_item.properties.id && server_item.properties.id ? server_item.properties.id : ""
                 my_server_ids.push(current_server_id)
             })
 
             my_server_ids.map(async(server_id, index) => {
                 // Now join each guild. Response doesn't matter,but it may end up as GUILD_MEMBER_LIST_UPDATE
+                // Dpending on how many servers you have, you may need to add a sleep 500ms here. But I don't have an issue.
                 const payload = { "op": 14, "d": { "guild_id": server_id, "typing": true, "threads": true, "activities": true, "members": [], "channels": {  }, "thread_member_lists": [] } }
                 ws.send(JSON.stringify(payload));
             })
