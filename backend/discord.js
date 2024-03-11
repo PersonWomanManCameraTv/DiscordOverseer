@@ -3,16 +3,13 @@ const {DiscordSocketHelper} = require('./helpers.js')
 
 const {GuildsHandler} = require("./discordAPI/guilds.js")
 const {MessagesHandler} = require("./discordAPI/messages.js")
+
 const DiscordHelper = new DiscordSocketHelper();
 
 const Guilds = new GuildsHandler();
 const Messages = new MessagesHandler();
 
 class DiscordHandler{
-
-    constructor(){
-        
-    }
 
     initializeWebSocket() {
         /*
