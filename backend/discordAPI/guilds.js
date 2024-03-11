@@ -30,53 +30,34 @@ class Guilds{
        
     }
 
-    join_subscribed(d){
-        let subscribed_guilds = {}
+    join_subscribed(d, callback = () => {}){
+        let my_server_ids = []
+
         try {
             const result = d.guilds;
-
-            result.map((server_item) => {
-                this.server_count = this.server_count + 1
-                let current_server_id = server_item.properties.id
-                subscribed_guilds[current_server_id] = []
-
-                server_item.channels.map((channel_item) => {
-
-                    /*
-                        Look into this. Sometimes "member" doesn't want to appear in some servers as a role. I'm using this to see
-                        if I have perms to join that channel. No role member in server, no channel.
-                        So, there's a socket call to get roles of a server, but this is okay for now.
-                    */
-                    channel_item.permission_overwrites.map((roles_overwrite) => {
-                        if (roles_overwrite.type === "member") {
-                            this.channel_count = this.channel_count + 1
-                            subscribed_guilds[current_server_id].push(channel_item.id)
-                        }else{
-                            this.filtered_channels += 1
-                        }
-                    })
-                })
+            //lol callback. Just sending back the complete my subbed guilds list
+            callback({
+                type: "GUILDS",
+                result
             })
 
-            const server_keys = Object.keys(subscribed_guilds)
+            result.map((server_item) => {
+                let current_server_id = server_item.properties.id && server_item.properties.id ? server_item.properties.id : ""
+                my_server_ids.push(current_server_id)
+                this.server_count++
+            })
 
-            server_keys.map(async(server_id_, index) => {
-                // Now join each guild
-                const payload = { "op": 14, "d": { "guild_id": server_id_, "typing": true, "threads": true, "activities": true, "members": [], "channels": { "0": [[index, 99]] }, "thread_member_lists": [] } }
+            my_server_ids.map(async(server_id, index) => {
+                // Now join each guild. Response doesn't matter,but it may end up as GUILD_MEMBER_LIST_UPDATE
+                const payload = { "op": 14, "d": { "guild_id": server_id, "typing": true, "threads": true, "activities": true, "members": [], "channels": {  }, "thread_member_lists": [] } }
                 ws.send(JSON.stringify(payload));
             })
         } catch (err){
-            console.log("Send this error message to me. I can't regenerate it and I think it's channel or server specific.")
+            console.log("I can't regenerate it and I think it's channel or server specific. But I don't get it enough to care tbh")
             console.log(err)
         }
 
     }
-
-    clear_guilds(){
-        const payload = { "op": 4, "d": { "guild_id": null, "channel_id": null, "self_mute": true, "self_deaf": false, "self_video": false, "flags": 2 } }
-        ws.send(JSON.stringify(payload));
-    }
-}
 
 module.exports = {
     GuildsHandler: Guilds
