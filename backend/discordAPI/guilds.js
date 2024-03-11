@@ -2,15 +2,6 @@
 const {ws} = require("./socket.js")
 
 class Guilds{
-    constructor(){
-        this.savedChannels = [];
-        this.channel_countx = 0;
- 
-        this.server_count = 0;
-        this.channel_count = 0;
-        this.filtered_channels = 0;
-    }
-
     join_single(guild_id, channel_id){
         // Return type: jsonObject
         // Unused. Was used to join a guild as lurker with guild_id. Method still works, but this ain't it
@@ -45,7 +36,6 @@ class Guilds{
             result.map((server_item) => {
                 let current_server_id = server_item.properties.id && server_item.properties.id ? server_item.properties.id : ""
                 my_server_ids.push(current_server_id)
-                this.server_count++
             })
 
             my_server_ids.map(async(server_id, index) => {
