@@ -35,7 +35,7 @@ class DiscordHandler{
             if(d){
                 if(d.hasOwnProperty("session_id")){
                     // session_id for socket if you need it, looks like: e75217b4315e38def579333ed682bb22
-                    // I haven't found a use case, but it's here ig
+                    // To reconnect and resume prev sessions on sudden disconect. Kinda pointless ngl
                 }
             }
              
@@ -55,7 +55,7 @@ class DiscordHandler{
         
             switch (t) {
                 /*
-                    Options to use. Just use variable 'd' has it has the data.
+                    Options to use. Just use variable 'd' as it has the data.
                 */
                 case 'READY_SUPPLEMENTAL':
                     break;
