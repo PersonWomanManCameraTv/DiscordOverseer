@@ -2,26 +2,6 @@
 const {ws} = require("./socket.js")
 
 class Guilds{
-    join_single(guild_id, channel_id){
-        // Return type: jsonObject
-        // Unused. Was used to join a guild as lurker with guild_id. Method still works, but this ain't it
-        if (typeof guild_id !== 'string' && typeof channel_id !== 'string') {
-            return {
-                sucess: false,
-                message: "guilds.js -> join(): Type of params `server_id` or `channel_id` must be of value `string`"
-            };
-        }
-
-        payload = { "op": 14, "d": { "guild_id": guild_id, "typing": false, "threads": true, "activities": true, "members": [], "channels": { "0": [[0, 99]] }, "thread_member_lists": [] } }
-        ws.send(JSON.stringify(payload));
-
-        return {
-            sucess: true,
-            message: `You have joined a guild with the id of \`${guild_id}\``
-        };
-       
-    }
-
     join_subscribed(d, callback = () => {}){
         let my_server_ids = []
 
