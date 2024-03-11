@@ -13,6 +13,7 @@ class Guilds{
 
     join_single(guild_id, channel_id){
         // Return type: jsonObject
+        // Unused. Was used to join a guild as lurker with guild_id. Method still works, but this ain't it
         if (typeof guild_id !== 'string' && typeof channel_id !== 'string') {
             return {
                 sucess: false,
