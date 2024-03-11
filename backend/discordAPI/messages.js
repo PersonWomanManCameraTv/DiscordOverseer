@@ -65,7 +65,6 @@ class Messages{
 
     sendMessage(){
         // send messages to a discord channel.
-        // REMOVED:  because you can spam multiple channels and dms at once
     }
 }
 
